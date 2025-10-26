@@ -96,13 +96,40 @@ Some of the included themes:
 
 ## Features
 
-- ⚡ **Zero dependencies** - Pure Go, no runtime parsing
-- 🎨 **361 themes** - Professional color schemes
-- 🌈 **Full 16-color ANSI support** - All primary + bright colors
-- 🚀 **Fast** - All themes compiled into binary
-- 📦 **Small** - ~200KB of Go code
-- 🔒 **Type-safe** - Full Go struct definitions
-- 📝 **Well-documented** - Clear API with examples
+- **Zero dependencies** - Pure Go, no runtime parsing
+- **361 themes** - Professional color schemes
+- **Full 16-color ANSI support** - All primary + bright colors
+- **Fast** - All themes compiled into binary
+- **Small** - ~200KB of Go code
+- **Type-safe** - Full Go struct definitions
+- **Well-documented** - Clear API with examples
+- **Lipgloss integration** - Optional subpackage for Bubble Tea TUIs
+
+## Lipgloss Integration (Bubble Tea TUIs)
+
+Want to use these themes in [Bubble Tea](https://github.com/charmbracelet/bubbletea) applications? Import the `lipgloss` subpackage for pre-wrapped `lipgloss.Color` types:
+
+```bash
+go get github.com/willyv3/gogh-themes/lipgloss
+```
+
+```go
+import (
+    "github.com/charmbracelet/lipgloss"
+    lipglossthemes "github.com/willyv3/gogh-themes/lipgloss"
+)
+
+// Get theme with lipgloss.Color types
+theme, _ := lipglossthemes.Get("Dracula")
+
+// Use directly in styles
+titleStyle := lipgloss.NewStyle().
+    Foreground(theme.BrightBlue).
+    Background(theme.Background).
+    Bold(true)
+```
+
+See [lipgloss/README.md](lipgloss/README.md) for complete documentation and examples.
 
 ## API
 
