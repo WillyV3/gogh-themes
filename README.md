@@ -26,11 +26,18 @@ func main() {
     fmt.Printf("Total themes: %d\n", len(allThemes))
 
     // Get a specific theme
-    theme, ok := goghthemes.Get("Tokyo Night")
+    theme, ok := goghthemes.Get("Dracula")
     if ok {
         fmt.Printf("Background: %s\n", theme.Background)
         fmt.Printf("Foreground: %s\n", theme.Foreground)
+
+        // Primary colors
         fmt.Printf("Blue: %s\n", theme.Blue)
+        fmt.Printf("Red: %s\n", theme.Red)
+
+        // Bright colors (NEW in v1.1.0!)
+        fmt.Printf("BrightBlue: %s\n", theme.BrightBlue)
+        fmt.Printf("BrightRed: %s\n", theme.BrightRed)
     }
 
     // Get all theme names (sorted alphabetically)
@@ -43,13 +50,15 @@ func main() {
 
 ## Theme Structure
 
-Each theme provides:
+Each theme provides **full 16-color ANSI support**:
 
 ```go
 type Theme struct {
     Name       string // Theme name
     Background string // Background color (hex)
     Foreground string // Foreground/text color (hex)
+
+    // Primary colors (ANSI 0-7)
     Black      string // ANSI color 0
     Red        string // ANSI color 1
     Green      string // ANSI color 2
@@ -58,7 +67,16 @@ type Theme struct {
     Magenta    string // ANSI color 5
     Cyan       string // ANSI color 6
     White      string // ANSI color 7
-    Gray       string // ANSI color 8 (bright black)
+
+    // Bright colors (ANSI 8-15)
+    BrightBlack   string // ANSI color 8
+    BrightRed     string // ANSI color 9
+    BrightGreen   string // ANSI color 10
+    BrightYellow  string // ANSI color 11
+    BrightBlue    string // ANSI color 12
+    BrightMagenta string // ANSI color 13
+    BrightCyan    string // ANSI color 14
+    BrightWhite   string // ANSI color 15
 }
 ```
 
@@ -80,8 +98,9 @@ Some of the included themes:
 
 - ⚡ **Zero dependencies** - Pure Go, no runtime parsing
 - 🎨 **361 themes** - Professional color schemes
+- 🌈 **Full 16-color ANSI support** - All primary + bright colors
 - 🚀 **Fast** - All themes compiled into binary
-- 📦 **Tiny** - ~150KB of Go code
+- 📦 **Small** - ~200KB of Go code
 - 🔒 **Type-safe** - Full Go struct definitions
 - 📝 **Well-documented** - Clear API with examples
 
