@@ -131,6 +131,23 @@ titleStyle := lipgloss.NewStyle().
 
 See [lipgloss/README.md](lipgloss/README.md) for complete documentation and examples.
 
+## Examples
+
+Check out [examples/](examples/) for interactive demos:
+
+### [Bubble Tea Theme Demo](examples/bubbletea-demo)
+
+Interactive TUI showcasing theme switching:
+- Cycle through all 361 themes with `t` key
+- Fuzzy search themes with `/` key
+- See all 16 ANSI colors in action
+- Live preview with multiple styled components
+
+```bash
+cd examples/bubbletea-demo
+go run main.go
+```
+
 ## API
 
 ### `All() map[string]Theme`

@@ -13,3 +13,5 @@
 
 # Go workspace file
 go.work
+examples/*/bubbletea-demo
+examples/*/*.exe
