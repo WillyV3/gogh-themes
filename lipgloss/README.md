@@ -2,7 +2,7 @@
 
 **Lipgloss integration for gogh-themes - Ready-to-use color themes for Bubble Tea TUIs**
 
-This subpackage wraps all 371 gogh-themes colors as `lipgloss.Color` types, making them instantly usable in [Bubble Tea](https://github.com/charmbracelet/bubbletea) terminal user interfaces without any conversion.
+This subpackage wraps all 373 gogh-themes colors as `lipgloss.Color` types, making them instantly usable in [Bubble Tea](https://github.com/charmbracelet/bubbletea) terminal user interfaces without any conversion.
 
 ## Installation
 
@@ -131,7 +131,7 @@ lipgloss.NewStyle().Foreground(theme.BrightWhite)   // Max contrast
 ## API
 
 ### `All() map[string]Theme`
-Returns all 371 themes as a map of theme names to lipgloss-wrapped Themes.
+Returns all 373 themes as a map of theme names to lipgloss-wrapped Themes.
 
 ### `Get(name string) (Theme, bool)`
 Returns a lipgloss-wrapped theme by name. Case-sensitive. Returns false if not found.
@@ -158,7 +158,7 @@ Try these popular themes in your TUI:
 
 - **Zero boilerplate** - Colors are pre-wrapped as `lipgloss.Color`
 - **Instant theming** - Switch themes with one line
-- **Professional colors** - 371 curated terminal themes
+- **Professional colors** - 373 curated terminal themes
 - **Full ANSI support** - All 16 colors available
 - **Type-safe** - Full Go type checking
 - **Zero runtime overhead** - Compile-time conversion

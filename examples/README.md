@@ -22,7 +22,7 @@ go run main.go
 ```
 
 **Features:**
-- 371 professional themes
+- 373 professional themes
 - Press `t` to cycle themes
 - Press `/` to search themes
 - Live preview with multiple styled components
