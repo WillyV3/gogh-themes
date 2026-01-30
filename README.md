@@ -1,8 +1,8 @@
 # gogh-themes
 
-**361 professional terminal color schemes for Go applications**
+**371 professional terminal color schemes for Go applications**
 
-A zero-dependency Go package providing 361 terminal color themes sourced from the [Gogh](https://github.com/Gogh-Co/Gogh) collection. All themes are compiled into pure Go code for maximum performance - no runtime YAML parsing required.
+A zero-dependency Go package providing 371 terminal color themes sourced from the [Gogh](https://github.com/Gogh-Co/Gogh) collection. All themes are compiled into pure Go code for maximum performance - no runtime YAML parsing required.
 
 ## Installation
 
@@ -21,7 +21,7 @@ import (
 )
 
 func main() {
-    // Get all 361 themes
+    // Get all 371 themes
     allThemes := goghthemes.All()
     fmt.Printf("Total themes: %d\n", len(allThemes))
 
@@ -97,7 +97,7 @@ Some of the included themes:
 ## Features
 
 - **Zero dependencies** - Pure Go, no runtime parsing
-- **361 themes** - Professional color schemes
+- **371 themes** - Professional color schemes
 - **Full 16-color ANSI support** - All primary + bright colors
 - **Fast** - All themes compiled into binary
 - **Small** - ~200KB of Go code
@@ -138,7 +138,7 @@ Check out [examples/](examples/) for interactive demos:
 ### [Bubble Tea Theme Demo](examples/bubbletea-demo)
 
 Interactive TUI showcasing theme switching:
-- Cycle through all 361 themes with `t` key
+- Cycle through all 371 themes with `t` key
 - Fuzzy search themes with `/` key
 - See all 16 ANSI colors in action
 - Live preview with multiple styled components
@@ -151,7 +151,7 @@ go run main.go
 ## API
 
 ### `All() map[string]Theme`
-Returns a map of all 361 themes keyed by theme name.
+Returns a map of all 371 themes keyed by theme name.
 
 ### `Get(name string) (Theme, bool)`
 Returns a specific theme by name. Case-sensitive.
