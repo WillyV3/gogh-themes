@@ -4,7 +4,7 @@ Interactive demo showcasing gogh-themes/lipgloss integration with Bubble Tea.
 
 ## Features
 
-- **361 Professional Themes** - All themes from the Gogh collection
+- **373 Professional Themes** - All themes from the Gogh collection
 - **Theme Cycling** - Press `t` to cycle through themes
 - **Fuzzy Search** - Press `/` to search and select themes
 - **Live Preview** - See all 16 ANSI colors in action

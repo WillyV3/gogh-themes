@@ -36,9 +36,9 @@ type Theme struct {
 	BrightWhite   lipgloss.Color
 }
 
-// All returns all 361 themes with lipgloss.Color wrapped values.
+// All returns all 373 themes with lipgloss.Color wrapped values.
 func All() map[string]Theme {
-	themes := make(map[string]Theme, 361)
+	themes := make(map[string]Theme, 373)
 	for name, t := range goghthemes.All() {
 		themes[name] = FromTheme(t)
 	}
@@ -55,7 +55,7 @@ func Get(name string) (Theme, bool) {
 	return FromTheme(t), true
 }
 
-// Names returns all 361 theme names sorted alphabetically.
+// Names returns all 373 theme names sorted alphabetically.
 func Names() []string {
 	return goghthemes.Names()
 }
